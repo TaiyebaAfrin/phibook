@@ -77,11 +77,20 @@ WSGI_APPLICATION = 'phibook.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# Database documentation https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+import dj_database_url
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://phibookbd_2muf_user:n0Awoh7DlnkUJmcdPT05A85o5X8yPe4D@dpg-d2uro8fdiees739a92d0-a.oregon-postgres.render.com/phibookbd_2muf',
+        conn_max_age=600
+    )
 }
 
 
