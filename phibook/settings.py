@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,7 +86,7 @@ WSGI_APPLICATION = 'phibook.wsgi.application'
 # }
 
 # Database documentation https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-import dj_database_url
+
 DATABASES = {
     'default': dj_database_url.config(
         default='postgresql://phibookbd_2muf_user:n0Awoh7DlnkUJmcdPT05A85o5X8yPe4D@dpg-d2uro8fdiees739a92d0-a.oregon-postgres.render.com/phibookbd_2muf',
@@ -145,7 +146,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -159,9 +162,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+
+
+
+
 MEDIA_URL = '/images/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
