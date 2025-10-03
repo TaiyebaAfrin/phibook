@@ -20,7 +20,7 @@ SECRET_KEY = 'django-insecure-*c9d(#+e%gb#$k@wbceq49#(pf*06rmjt9+h8*mp6lk34u51n2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [".vercel.app",   "127.0.0.1"]
+ALLOWED_HOSTS = [".vercel.app",   "127.0.0.1", "https://phibook-client.vercel.app", "https://phibook-client-gamma.vercel.app"]
 
 
 # Application definition
@@ -80,7 +80,8 @@ WSGI_APPLICATION = 'phi_book.wsgi.app'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://phibook-client.vercel.app"
+    "https://phibook-client.vercel.app",
+    "https://phibook-client-gamma.vercel.app"
 ]
 
 INTERNAL_IPS = [
