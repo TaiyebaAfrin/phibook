@@ -79,7 +79,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'phi_book.wsgi.app'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://phibook-client.vercel.app"
 ]
 
 INTERNAL_IPS = [
