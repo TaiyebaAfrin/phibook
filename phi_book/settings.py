@@ -107,11 +107,11 @@ INTERNAL_IPS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('dbname'),
-        'USER': config('user'),
-        'PASSWORD': config('password'),
-        'HOST': config('host'),
-        'PORT': config('port')
+        'NAME': 'postgres',
+        'USER': 'postgres.dxntauszrvsaxqotbpxd',
+        'PASSWORD': 'BXWrH8wXCFeGWJ1X',
+        'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',
+        'PORT': 5432
     }
 }
 
