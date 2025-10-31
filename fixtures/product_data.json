@@ -3,43 +3,50 @@
     "model": "product.category",
     "pk": 1,
     "fields": {
-      "name": "Electronics",
-      "description": "Devices and gadgets"
+      "name": "Fruits & Vegetables",
+      "description": "Fresh fruits and vegetables"
     }
   },
   {
     "model": "product.category",
     "pk": 2,
     "fields": {
-      "name": "Fashion",
-      "description": "Clothing and accessories"
+      "name": "Dairy & Eggs",
+      "description": "Milk, cheese, yogurt and eggs"
     }
   },
   {
     "model": "product.category",
     "pk": 3,
     "fields": {
-      "name": "Home Appliances",
-      "description": "Appliances for home use"
+      "name": "Meat & Poultry",
+      "description": "Fresh meat and poultry products"
     }
   },
   {
     "model": "product.category",
     "pk": 4,
     "fields": {
-      "name": "Books",
-      "description": "Books and educational materials"
+      "name": "Bakery & Bread",
+      "description": "Fresh bread and bakery items"
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 5,
+    "fields": {
+      "name": "Beverages",
+      "description": "Drinks and beverages"
     }
   },
   {
     "model": "product.product",
     "pk": 1,
     "fields": {
-      "name": "Smartphone",
-      "description": "High-quality smartphone for everyday use.",
-      "price": "213.80",
+      "name": "Fresh Apples",
+      "description": "Crisp and juicy red apples, perfect for snacking.",
+      "price": "4.99",
       "stock": 157,
-
       "category": 1,
       "created_at": "2025-02-05T02:45:04.629624",
       "updated_at": "2025-02-08T02:45:04.629624"
@@ -49,11 +56,10 @@
     "model": "product.product",
     "pk": 2,
     "fields": {
-      "name": "Laptop",
-      "description": "High-quality laptop for everyday use.",
-      "price": "46.92",
+      "name": "Organic Bananas",
+      "description": "Sweet organic bananas, rich in potassium.",
+      "price": "2.49",
       "stock": 174,
-
       "category": 1,
       "created_at": "2025-02-02T15:45:04.629624",
       "updated_at": "2025-02-02T15:45:04.629624"
@@ -63,11 +69,10 @@
     "model": "product.product",
     "pk": 3,
     "fields": {
-      "name": "Wireless Headphones",
-      "description": "High-quality wireless headphones for everyday use.",
-      "price": "144.57",
+      "name": "Fresh Carrots",
+      "description": "Crunchy fresh carrots, great for cooking or snacking.",
+      "price": "3.29",
       "stock": 82,
-
       "category": 1,
       "created_at": "2025-02-07T11:45:04.629624",
       "updated_at": "2025-02-09T11:45:04.629624"
@@ -77,11 +82,10 @@
     "model": "product.product",
     "pk": 4,
     "fields": {
-      "name": "Smartwatch",
-      "description": "High-quality smartwatch for everyday use.",
-      "price": "339.21",
+      "name": "Organic Spinach",
+      "description": "Fresh organic spinach leaves, packed with nutrients.",
+      "price": "5.99",
       "stock": 74,
-
       "category": 1,
       "created_at": "2025-01-23T08:45:04.629624",
       "updated_at": "2025-01-28T08:45:04.629624"
@@ -91,11 +95,10 @@
     "model": "product.product",
     "pk": 5,
     "fields": {
-      "name": "Tablet",
-      "description": "High-quality tablet for everyday use.",
-      "price": "417.98",
+      "name": "Red Tomatoes",
+      "description": "Vine-ripened red tomatoes, perfect for salads.",
+      "price": "3.79",
       "stock": 49,
-
       "category": 1,
       "created_at": "2025-02-19T19:45:04.629624",
       "updated_at": "2025-02-23T19:45:04.629624"
@@ -105,11 +108,10 @@
     "model": "product.product",
     "pk": 6,
     "fields": {
-      "name": "Bluetooth Speaker",
-      "description": "High-quality bluetooth speaker for everyday use.",
-      "price": "245.54",
+      "name": "Green Grapes",
+      "description": "Sweet seedless green grapes, perfect for snacks.",
+      "price": "6.99",
       "stock": 41,
-
       "category": 1,
       "created_at": "2025-01-26T14:45:04.629624",
       "updated_at": "2025-01-28T14:45:04.629624"
@@ -119,11 +121,10 @@
     "model": "product.product",
     "pk": 7,
     "fields": {
-      "name": "Digital Camera",
-      "description": "High-quality digital camera for everyday use.",
-      "price": "239.33",
+      "name": "Broccoli",
+      "description": "Fresh green broccoli, rich in vitamins.",
+      "price": "2.99",
       "stock": 41,
-
       "category": 1,
       "created_at": "2025-02-08T04:45:04.629624",
       "updated_at": "2025-02-11T04:45:04.629624"
@@ -133,11 +134,10 @@
     "model": "product.product",
     "pk": 8,
     "fields": {
-      "name": "Gaming Console",
-      "description": "High-quality gaming console for everyday use.",
-      "price": "109.55",
+      "name": "Oranges",
+      "description": "Juicy sweet oranges, great for juice.",
+      "price": "5.49",
       "stock": 43,
-
       "category": 1,
       "created_at": "2025-02-08T08:45:04.629624",
       "updated_at": "2025-02-11T08:45:04.629624"
@@ -147,11 +147,10 @@
     "model": "product.product",
     "pk": 9,
     "fields": {
-      "name": "Monitor",
-      "description": "High-quality monitor for everyday use.",
-      "price": "477.96",
+      "name": "Potatoes",
+      "description": "Fresh potatoes, perfect for cooking.",
+      "price": "3.49",
       "stock": 104,
-
       "category": 1,
       "created_at": "2025-02-03T13:45:04.629624",
       "updated_at": "2025-02-05T13:45:04.629624"
@@ -161,11 +160,10 @@
     "model": "product.product",
     "pk": 10,
     "fields": {
-      "name": "External Hard Drive",
-      "description": "High-quality external hard drive for everyday use.",
-      "price": "394.69",
+      "name": "Strawberries",
+      "description": "Sweet fresh strawberries, perfect for desserts.",
+      "price": "7.99",
       "stock": 16,
-
       "category": 1,
       "created_at": "2025-01-25T02:45:04.629624",
       "updated_at": "2025-01-25T02:45:04.629624"
@@ -175,11 +173,10 @@
     "model": "product.product",
     "pk": 11,
     "fields": {
-      "name": "T-Shirt",
-      "description": "High-quality t-shirt for everyday use.",
-      "price": "37.44",
+      "name": "Fresh Milk",
+      "description": "Whole fresh milk from local dairy farms.",
+      "price": "4.49",
       "stock": 187,
-
       "category": 2,
       "created_at": "2025-01-22T14:45:04.629624",
       "updated_at": "2025-01-27T14:45:04.629624"
@@ -189,11 +186,10 @@
     "model": "product.product",
     "pk": 12,
     "fields": {
-      "name": "Jeans",
-      "description": "High-quality jeans for everyday use.",
-      "price": "292.10",
+      "name": "Greek Yogurt",
+      "description": "Creamy Greek yogurt, high in protein.",
+      "price": "6.99",
       "stock": 22,
-
       "category": 2,
       "created_at": "2025-01-25T17:45:04.629624",
       "updated_at": "2025-01-27T17:45:04.629624"
@@ -203,11 +199,10 @@
     "model": "product.product",
     "pk": 13,
     "fields": {
-      "name": "Sneakers",
-      "description": "High-quality sneakers for everyday use.",
-      "price": "86.74",
+      "name": "Cheddar Cheese",
+      "description": "Aged cheddar cheese, perfect for cooking.",
+      "price": "8.99",
       "stock": 160,
-
       "category": 2,
       "created_at": "2025-01-22T02:45:04.629624",
       "updated_at": "2025-01-23T02:45:04.629624"
@@ -217,11 +212,10 @@
     "model": "product.product",
     "pk": 14,
     "fields": {
-      "name": "Jacket",
-      "description": "High-quality jacket for everyday use.",
-      "price": "320.85",
+      "name": "Free Range Eggs",
+      "description": "Farm fresh free range eggs, dozen pack.",
+      "price": "5.49",
       "stock": 153,
-
       "category": 2,
       "created_at": "2025-02-19T14:45:04.629624",
       "updated_at": "2025-02-22T14:45:04.629624"
@@ -231,11 +225,10 @@
     "model": "product.product",
     "pk": 15,
     "fields": {
-      "name": "Scarf",
-      "description": "High-quality scarf for everyday use.",
-      "price": "363.13",
+      "name": "Butter",
+      "description": "Creamy unsalted butter for cooking and baking.",
+      "price": "4.29",
       "stock": 180,
-
       "category": 2,
       "created_at": "2025-02-03T22:45:04.629624",
       "updated_at": "2025-02-08T22:45:04.629624"
@@ -245,11 +238,10 @@
     "model": "product.product",
     "pk": 16,
     "fields": {
-      "name": "Wrist Watch",
-      "description": "High-quality wrist watch for everyday use.",
-      "price": "40.06",
+      "name": "Mozzarella Cheese",
+      "description": "Fresh mozzarella cheese for pizza and pasta.",
+      "price": "7.49",
       "stock": 109,
-
       "category": 2,
       "created_at": "2025-01-28T23:45:04.629624",
       "updated_at": "2025-02-02T23:45:04.629624"
@@ -259,11 +251,10 @@
     "model": "product.product",
     "pk": 17,
     "fields": {
-      "name": "Sunglasses",
-      "description": "High-quality sunglasses for everyday use.",
-      "price": "20.05",
+      "name": "Sour Cream",
+      "description": "Fresh sour cream for dips and toppings.",
+      "price": "3.99",
       "stock": 109,
-
       "category": 2,
       "created_at": "2025-01-23T22:45:04.629624",
       "updated_at": "2025-01-27T22:45:04.629624"
@@ -273,11 +264,10 @@
     "model": "product.product",
     "pk": 18,
     "fields": {
-      "name": "Handbag",
-      "description": "High-quality handbag for everyday use.",
-      "price": "31.42",
+      "name": "Cottage Cheese",
+      "description": "Low-fat cottage cheese, healthy option.",
+      "price": "4.79",
       "stock": 119,
-
       "category": 2,
       "created_at": "2025-02-13T06:45:04.629624",
       "updated_at": "2025-02-17T06:45:04.629624"
@@ -287,11 +277,10 @@
     "model": "product.product",
     "pk": 19,
     "fields": {
-      "name": "Belt",
-      "description": "High-quality belt for everyday use.",
-      "price": "254.03",
+      "name": "Heavy Cream",
+      "description": "Heavy cream for cooking and baking.",
+      "price": "5.99",
       "stock": 100,
-
       "category": 2,
       "created_at": "2025-02-07T06:45:04.629624",
       "updated_at": "2025-02-08T06:45:04.629624"
@@ -301,11 +290,10 @@
     "model": "product.product",
     "pk": 20,
     "fields": {
-      "name": "Sports Shoes",
-      "description": "High-quality sports shoes for everyday use.",
-      "price": "67.97",
+      "name": "Yogurt Drink",
+      "description": "Refreshing probiotic yogurt drink.",
+      "price": "3.49",
       "stock": 35,
-
       "category": 2,
       "created_at": "2025-01-31T20:45:04.629624",
       "updated_at": "2025-01-31T20:45:04.629624"
@@ -315,11 +303,10 @@
     "model": "product.product",
     "pk": 21,
     "fields": {
-      "name": "Microwave Oven",
-      "description": "High-quality microwave oven for everyday use.",
-      "price": "76.42",
+      "name": "Chicken Breast",
+      "description": "Boneless skinless chicken breast, fresh and tender.",
+      "price": "12.99",
       "stock": 174,
-
       "category": 3,
       "created_at": "2025-02-05T11:45:04.629624",
       "updated_at": "2025-02-07T11:45:04.629624"
@@ -329,11 +316,10 @@
     "model": "product.product",
     "pk": 22,
     "fields": {
-      "name": "Refrigerator",
-      "description": "High-quality refrigerator for everyday use.",
-      "price": "340.05",
+      "name": "Ground Beef",
+      "description": "Lean ground beef, perfect for burgers and pasta.",
+      "price": "9.99",
       "stock": 150,
-
       "category": 3,
       "created_at": "2025-01-27T16:45:04.629624",
       "updated_at": "2025-01-27T16:45:04.629624"
@@ -343,11 +329,10 @@
     "model": "product.product",
     "pk": 23,
     "fields": {
-      "name": "Washing Machine",
-      "description": "High-quality washing machine for everyday use.",
-      "price": "246.55",
+      "name": "Pork Chops",
+      "description": "Fresh pork chops, great for grilling.",
+      "price": "11.49",
       "stock": 183,
-
       "category": 3,
       "created_at": "2025-02-05T01:45:04.629624",
       "updated_at": "2025-02-07T01:45:04.629624"
@@ -357,11 +342,10 @@
     "model": "product.product",
     "pk": 24,
     "fields": {
-      "name": "Vacuum Cleaner",
-      "description": "High-quality vacuum cleaner for everyday use.",
-      "price": "236.36",
+      "name": "Salmon Fillet",
+      "description": "Fresh Atlantic salmon fillet, rich in omega-3.",
+      "price": "15.99",
       "stock": 66,
-
       "category": 3,
       "created_at": "2025-01-29T03:45:04.629624",
       "updated_at": "2025-02-02T03:45:04.629624"
@@ -371,11 +355,10 @@
     "model": "product.product",
     "pk": 25,
     "fields": {
-      "name": "Air Conditioner",
-      "description": "High-quality air conditioner for everyday use.",
-      "price": "440.88",
+      "name": "Italian Sausage",
+      "description": "Fresh Italian sausage, perfect for pasta dishes.",
+      "price": "8.49",
       "stock": 196,
-
       "category": 3,
       "created_at": "2025-02-21T09:45:04.629624",
       "updated_at": "2025-02-25T09:45:04.629624"
@@ -385,11 +368,10 @@
     "model": "product.product",
     "pk": 26,
     "fields": {
-      "name": "Toaster",
-      "description": "High-quality toaster for everyday use.",
-      "price": "159.30",
+      "name": "Turkey Breast",
+      "description": "Lean turkey breast, healthy meat option.",
+      "price": "10.99",
       "stock": 122,
-
       "category": 3,
       "created_at": "2025-01-29T07:45:04.629624",
       "updated_at": "2025-01-29T07:45:04.629624"
@@ -399,11 +381,10 @@
     "model": "product.product",
     "pk": 27,
     "fields": {
-      "name": "Coffee Maker",
-      "description": "High-quality coffee maker for everyday use.",
-      "price": "145.49",
+      "name": "Bacon",
+      "description": "Smoked bacon, perfect for breakfast.",
+      "price": "7.99",
       "stock": 113,
-
       "category": 3,
       "created_at": "2025-02-03T12:45:04.629624",
       "updated_at": "2025-02-06T12:45:04.629624"
@@ -413,11 +394,10 @@
     "model": "product.product",
     "pk": 28,
     "fields": {
-      "name": "Blender",
-      "description": "High-quality blender for everyday use.",
-      "price": "97.47",
+      "name": "Chicken Thighs",
+      "description": "Juicy chicken thighs, great for roasting.",
+      "price": "8.99",
       "stock": 71,
-
       "category": 3,
       "created_at": "2025-02-18T02:45:04.629624",
       "updated_at": "2025-02-19T02:45:04.629624"
@@ -427,11 +407,10 @@
     "model": "product.product",
     "pk": 29,
     "fields": {
-      "name": "Water Heater",
-      "description": "High-quality water heater for everyday use.",
-      "price": "341.24",
+      "name": "Beef Steak",
+      "description": "Premium beef steak, perfect for grilling.",
+      "price": "18.99",
       "stock": 25,
-
       "category": 3,
       "created_at": "2025-02-15T22:45:04.629624",
       "updated_at": "2025-02-17T22:45:04.629624"
@@ -441,11 +420,10 @@
     "model": "product.product",
     "pk": 30,
     "fields": {
-      "name": "Dishwasher",
-      "description": "High-quality dishwasher for everyday use.",
-      "price": "158.97",
+      "name": "Shrimp",
+      "description": "Fresh shrimp, great for seafood dishes.",
+      "price": "14.99",
       "stock": 128,
-
       "category": 3,
       "created_at": "2025-01-27T07:45:04.629624",
       "updated_at": "2025-01-29T07:45:04.629624"
@@ -455,11 +433,10 @@
     "model": "product.product",
     "pk": 31,
     "fields": {
-      "name": "Fiction Novel",
-      "description": "High-quality fiction novel for everyday use.",
-      "price": "180.90",
+      "name": "Whole Wheat Bread",
+      "description": "Freshly baked whole wheat bread, healthy and delicious.",
+      "price": "3.99",
       "stock": 113,
-
       "category": 4,
       "created_at": "2025-01-24T20:45:04.629624",
       "updated_at": "2025-01-28T20:45:04.629624"
@@ -469,11 +446,10 @@
     "model": "product.product",
     "pk": 32,
     "fields": {
-      "name": "Science Textbook",
-      "description": "High-quality science textbook for everyday use.",
-      "price": "159.09",
+      "name": "Croissants",
+      "description": "Buttery French croissants, perfect for breakfast.",
+      "price": "5.99",
       "stock": 150,
-
       "category": 4,
       "created_at": "2025-02-21T17:45:04.629624",
       "updated_at": "2025-02-26T17:45:04.629624"
@@ -483,11 +459,10 @@
     "model": "product.product",
     "pk": 33,
     "fields": {
-      "name": "History Book",
-      "description": "High-quality history book for everyday use.",
-      "price": "453.72",
+      "name": "Bagels",
+      "description": "Fresh plain bagels, great with cream cheese.",
+      "price": "4.49",
       "stock": 53,
-
       "category": 4,
       "created_at": "2025-01-31T15:45:04.629624",
       "updated_at": "2025-02-01T15:45:04.629624"
@@ -497,11 +472,10 @@
     "model": "product.product",
     "pk": 34,
     "fields": {
-      "name": "Biography",
-      "description": "High-quality biography for everyday use.",
-      "price": "279.83",
+      "name": "Chocolate Chip Cookies",
+      "description": "Soft baked chocolate chip cookies, homemade taste.",
+      "price": "6.49",
       "stock": 146,
-
       "category": 4,
       "created_at": "2025-02-18T19:45:04.629624",
       "updated_at": "2025-02-22T19:45:04.629624"
@@ -511,11 +485,10 @@
     "model": "product.product",
     "pk": 35,
     "fields": {
-      "name": "Self-Help Book",
-      "description": "High-quality self-help book for everyday use.",
-      "price": "61.95",
+      "name": "French Baguette",
+      "description": "Crispy French baguette, perfect for sandwiches.",
+      "price": "2.99",
       "stock": 161,
-
       "category": 4,
       "created_at": "2025-02-05T06:45:04.629624",
       "updated_at": "2025-02-07T06:45:04.629624"
@@ -525,11 +498,10 @@
     "model": "product.product",
     "pk": 36,
     "fields": {
-      "name": "Cookbook",
-      "description": "High-quality cookbook for everyday use.",
-      "price": "240.40",
+      "name": "Cinnamon Rolls",
+      "description": "Fresh cinnamon rolls with cream cheese frosting.",
+      "price": "7.99",
       "stock": 174,
-
       "category": 4,
       "created_at": "2025-01-27T17:45:04.629624",
       "updated_at": "2025-01-28T17:45:04.629624"
@@ -539,11 +511,10 @@
     "model": "product.product",
     "pk": 37,
     "fields": {
-      "name": "Children's Storybook",
-      "description": "High-quality children's storybook for everyday use.",
-      "price": "55.56",
+      "name": "Multigrain Bread",
+      "description": "Healthy multigrain bread with seeds.",
+      "price": "4.99",
       "stock": 141,
-
       "category": 4,
       "created_at": "2025-02-01T14:45:04.629624",
       "updated_at": "2025-02-02T14:45:04.629624"
@@ -553,11 +524,10 @@
     "model": "product.product",
     "pk": 38,
     "fields": {
-      "name": "Travel Guide",
-      "description": "High-quality travel guide for everyday use.",
-      "price": "161.14",
+      "name": "Donuts",
+      "description": "Fresh glazed donuts, soft and sweet.",
+      "price": "8.99",
       "stock": 78,
-
       "category": 4,
       "created_at": "2025-02-14T02:45:04.629624",
       "updated_at": "2025-02-17T02:45:04.629624"
@@ -567,11 +537,10 @@
     "model": "product.product",
     "pk": 39,
     "fields": {
-      "name": "Mystery Novel",
-      "description": "High-quality mystery novel for everyday use.",
-      "price": "304.49",
+      "name": "Sourdough Bread",
+      "description": "Artisan sourdough bread, tangy flavor.",
+      "price": "6.49",
       "stock": 134,
-
       "category": 4,
       "created_at": "2025-02-01T02:45:04.629624",
       "updated_at": "2025-02-02T02:45:04.629624"
@@ -581,14 +550,78 @@
     "model": "product.product",
     "pk": 40,
     "fields": {
-      "name": "Fantasy Novel",
-      "description": "High-quality fantasy novel for everyday use.",
-      "price": "347.72",
+      "name": "Muffins",
+      "description": "Fresh blueberry muffins, perfect for breakfast.",
+      "price": "9.99",
       "stock": 101,
-
       "category": 4,
       "created_at": "2025-02-16T12:45:04.629624",
       "updated_at": "2025-02-21T12:45:04.629624"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 41,
+    "fields": {
+      "name": "Orange Juice",
+      "description": "Fresh squeezed orange juice, no preservatives.",
+      "price": "5.99",
+      "stock": 89,
+      "category": 5,
+      "created_at": "2025-02-10T10:45:04.629624",
+      "updated_at": "2025-02-12T10:45:04.629624"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 42,
+    "fields": {
+      "name": "Bottled Water",
+      "description": "Pure spring water, 1-liter bottles.",
+      "price": "1.99",
+      "stock": 200,
+      "category": 5,
+      "created_at": "2025-02-11T11:45:04.629624",
+      "updated_at": "2025-02-13T11:45:04.629624"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 43,
+    "fields": {
+      "name": "Green Tea",
+      "description": "Premium green tea bags, antioxidant rich.",
+      "price": "4.49",
+      "stock": 95,
+      "category": 5,
+      "created_at": "2025-02-09T09:45:04.629624",
+      "updated_at": "2025-02-11T09:45:04.629624"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 44,
+    "fields": {
+      "name": "Coffee Beans",
+      "description": "Arabica coffee beans, medium roast.",
+      "price": "12.99",
+      "stock": 67,
+      "category": 5,
+      "created_at": "2025-02-08T08:45:04.629624",
+      "updated_at": "2025-02-10T08:45:04.629624"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 45,
+    "fields": {
+      "name": "Soda Pack",
+      "description": "Assorted soda cans, 12-pack variety.",
+      "price": "8.99",
+      "stock": 120,
+      "category": 5,
+      "created_at": "2025-02-07T07:45:04.629624",
+      "updated_at": "2025-02-09T07:45:04.629624"
     }
   }
 ]

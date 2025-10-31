@@ -20,7 +20,7 @@ SECRET_KEY = 'django-insecure-*c9d(#+e%gb#$k@wbceq49#(pf*06rmjt9+h8*mp6lk34u51n2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [".vercel.app",   "127.0.0.1", "https://phibook-client.vercel.app", "https://phibook-client-gamma.vercel.app"]
+ALLOWED_HOSTS = [".vercel.app", "127.0.0.1", "https://groceryshop-rho.vercel.app", "https://backend-groceryshop.vercel.app"]
 
 
 # Application definition
@@ -80,8 +80,9 @@ WSGI_APPLICATION = 'phi_book.wsgi.app'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://phibook-client.vercel.app",
-    "https://phibook-client-gamma.vercel.app"
+    "https://groceryshop-rho.vercel.app",
+    "https://backend-groceryshop.vercel.app",
+    "http://127.0.0.1:8000",
 ]
 
 INTERNAL_IPS = [
@@ -91,24 +92,28 @@ INTERNAL_IPS = [
 ]
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+#off before git
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('dbname'),
-        'USER': config('user'),
-        'PASSWORD': config('password'),
-        'HOST': config('host'),
-        'PORT': config('port')
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+#active before push  on git
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('dbname'),
+#         'USER': config('user'),
+#         'PASSWORD': config('password'),
+#         'HOST': config('host'),
+#         'PORT': config('port')
+#     }
+# }
 
 
 # Password validation
@@ -199,7 +204,7 @@ SIMPLE_JWT = {
 DJOSER = {
     'EMAIL_FRONTEND_PROTOCOL' : config("FRONTEND_POTOCOL"),
     'EMAIL_FRONTEND_DOMAIN' : config("FRONTEND_DOMAIN"),
-    'EMAIL_FRONTEND_SITE_NAME' : 'PhiBook',
+    'EMAIL_FRONTEND_SITE_NAME' : 'Grocery Shop',
     'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': 'activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
