@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*c9d(#+e%gb#$k@wbceq49#(pf*06rmjt9+h8*mp6lk34u51n2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [".vercel.app", "127.0.0.1", "https://groceryshop-rho.vercel.app", "https://backend-groceryshop.vercel.app"]
 
@@ -238,6 +238,6 @@ EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
-BACKEND_URL = 'https://backend-groceryshop.vercel.app'
-FRONTEND_URL = 'https://groceryshop-rho.vercel.app'
+BACKEND_URL = config("BACKEND_URL")
+FRONTEND_URL = config("FRONTEND_URL")
 

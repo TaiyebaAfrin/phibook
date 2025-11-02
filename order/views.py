@@ -13,26 +13,44 @@ from rest_framework.decorators import api_view
 from sslcommerz_lib import SSLCOMMERZ 
 from django.conf import settings as main_settings
 from django.http import HttpResponseRedirect
+from users.models import User
 # Create your views here.
 
 class CartViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet):
     serializer_class = CartSerializer
     permission_classes = [IsAuthenticated]
 
+    def create(self, request, *args, **kwargs):
+        # Check if user already has a cart
+        user = request.user
+        if hasattr(user, 'cart'):
+            # Return the existing cart instead of creating a new one
+            serializer = self.get_serializer(user.cart)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        
+        # If user doesn't have a cart, proceed with creation
+        return super().create(request, *args, **kwargs)
+
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
     def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):
+            return Cart.objects.none()
         return Cart.objects.prefetch_related('items__product').filter(user=self.request.user)
-    
-    def create(self, request, *args, **kwargs):
-        existing_cart = Cart.objects.filter(user=request.user).first()
 
-        if existing_cart:
-            serializer = self.get_serializer(existing_cart)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        
-        return super().create(request, **args, **kwargs)
+
+# class CartViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet):
+#     serializer_class = CartSerializer
+#     permission_classes = [IsAuthenticated]
+
+#     def perform_create(self, serializer):
+#         serializer.save(user=self.request.user)
+
+#     def get_queryset(self):
+#         if getattr(self, 'swagger_fake_view', False):
+#             return Cart.objects.none()
+#         return Cart.objects.prefetch_related('items__product').filter(user=self.request.user)
 
 
 class CartItemViewSet(ModelViewSet):
@@ -46,10 +64,14 @@ class CartItemViewSet(ModelViewSet):
         return CartItemSerializer
 
     def get_serializer_context(self):
-        return {'cart_id': self.kwargs['cart_pk']}
+        context = super().get_serializer_context()
+        if getattr(self, 'swagger_fake_view', False):
+            return context
+
+        return {'cart_id': self.kwargs.get('cart_pk')}
 
     def get_queryset(self):
-        return CartItem.objects.select_related('product').filter(cart_id=self.kwargs['cart_pk'])
+        return CartItem.objects.select_related('product').filter(cart_id=self.kwargs.get('cart_pk'))
 
 
 class OrderViewset(ModelViewSet):
@@ -85,13 +107,19 @@ class OrderViewset(ModelViewSet):
         return orderSz.OrderSerializer
 
     def get_serializer_context(self):
+        if getattr(self, 'swagger_fake_view', False):
+            return super().get_serializer_context()
         return {'user_id': self.request.user.id, 'user': self.request.user}
 
     def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):
+            return Order.objects.none()
         if self.request.user.is_staff:
             return Order.objects.prefetch_related('items__product').all()
         return Order.objects.prefetch_related('items__product').filter(user=self.request.user)
     
+
+
 
 @api_view(['POST'])
 def intiate_payment(request):
@@ -100,15 +128,19 @@ def intiate_payment(request):
     order_id = request.data.get("orderId")
     num_items = request.data.get("numItems")
 
-    settings = { 'store_id': 'phibo68de791f6dac2', 'store_pass': 'phibo68de791f6dac2@ssl', 'issandbox': True }
+    settings = { 
+        'store_id': 'phibo68de791f6dac2', 
+        'store_pass': 'phibo68de791f6dac2@ssl', 
+        'issandbox': True 
+    }
     sslcz = SSLCOMMERZ(settings)
     post_body = {}
     post_body['total_amount'] = amount
     post_body['currency'] = "BDT"
     post_body['tran_id'] = f"trx_{order_id}"
     post_body['success_url'] = f"{main_settings.BACKEND_URL}/api/v1/payment/success/"
-    post_body['fail_url'] = "http://localhost:5173/dashboard/payment/fail/"
-    post_body['cancel_url'] = "http://localhost:5173/dashboard/orders/"
+    post_body['fail_url'] = f"{main_settings.FRONTEND_URL}/dashboard/payment/fail/"
+    post_body['cancel_url'] = f"{main_settings.FRONTEND_URL}/dashboard/orders/"
     post_body['emi_option'] = 0
     post_body['cus_name'] = f"{user.first_name} {user.last_name}"
     post_body['cus_email'] = user.email
@@ -125,7 +157,7 @@ def intiate_payment(request):
 
     response = sslcz.createSession(post_body) # API response
 
-    if response.get("status") =='SUCCESS':
+    if response.get("status") == 'SUCCESS':
         return Response({"payment_url": response['GatewayPageURL']})
     return Response({"error": "Payment initiation failed"}, status=status.HTTP_400_BAD_REQUEST)
 
