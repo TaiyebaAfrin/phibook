@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import timedelta
 from decouple import config
 import cloudinary
+import dj_database_url
 
 
 AUTH_USER_MODEL = 'users.User'
@@ -117,18 +118,17 @@ INTERNAL_IPS = [
 #     }
 # }
 
+
+
+# Your DATABASE_URL from Supabase
+DATABASE_URL = "postgresql://postgres:KeUyX6b6dIkjhnIH@db.jnaddnwhbuzeupyohohl.supabase.co:5432/postgres"
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.jnaddnwhbuzeupyohohl',
-        'PASSWORD': 'KeUyX6b6dIkjhnIH',
-        'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',
-        'PORT': '5432',  # Note: Changed from 6543 to 5432
-        'OPTIONS': {
-            'sslmode': 'require',
-        },
-    }
+    'default': dj_database_url.config(
+        default=DATABASE_URL,
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
 # Password validation
