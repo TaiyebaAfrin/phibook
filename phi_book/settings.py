@@ -4,6 +4,7 @@ from datetime import timedelta
 from decouple import config
 import cloudinary
 import dj_database_url
+import os
 
 
 AUTH_USER_MODEL = 'users.User'
@@ -120,16 +121,15 @@ INTERNAL_IPS = [
 
 
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.jnaddnwhbuzeupyohohl',  # Try with project ID
-        'PASSWORD': 'KeUyX6b6dIkjhnIH',
-        'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',  # Use pooler
-        'PORT': '6543'
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')  # Reads from .env file
+    )
 }
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
