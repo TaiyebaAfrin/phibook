@@ -120,15 +120,21 @@ INTERNAL_IPS = [
 
 
 
-# Your DATABASE_URL from Supabase
-DATABASE_URL = "postgresql://postgres:KeUyX6b6dIkjhnIH@db.jnaddnwhbuzeupyohohl.supabase.co:5432/postgres"
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=DATABASE_URL,
-        conn_max_age=600,
-        conn_health_checks=True,
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.jnaddnwhbuzeupyohohl',  # Try with project ID
+        'PASSWORD': 'KeUyX6b6dIkjhnIH',
+        'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',  # Use pooler
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+            'options': '-c search_path=public -c statement_timeout=30000'
+        },
+        'CONN_MAX_AGE': 300,
+        'TIME_ZOUT': 'UTC',
+    }
 }
 
 # Password validation
