@@ -124,13 +124,12 @@ DATABASES = {
         'USER': 'postgres.jnaddnwhbuzeupyohohl',
         'PASSWORD': 'KeUyX6b6dIkjhnIH',
         'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',
-        'PORT': '6543',
+        'PORT': '5432',  # Note: Changed from 6543 to 5432
         'OPTIONS': {
-            'sslmode': 'require',  # Supabase requires SSL
+            'sslmode': 'require',
         },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
