@@ -106,14 +106,28 @@ INTERNAL_IPS = [
 
 #active before push  on git
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres.xxwfvgurvhcmaoxmzeov',
+#         'PASSWORD': 'SGBWQLz2yI2ikVaM',
+#         'HOST': 'aws-1-ap-south-1.pooler.supabase.com',
+#         'PORT': 6543
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': 'postgres.xxwfvgurvhcmaoxmzeov',
-        'PASSWORD': 'SGBWQLz2yI2ikVaM',
-        'HOST': 'aws-1-ap-south-1.pooler.supabase.com',
-        'PORT': 6543
+        'USER': 'postgres.maivndyxpicleiodvbvc',
+        'PASSWORD': 'kVSyJ39B1PTsCEgE',
+        'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',
+        'PORT': '6543',
+        'OPTIONS': {
+            'sslmode': 'require',  # Supabase requires SSL
+        },
     }
 }
 
