@@ -127,7 +127,7 @@ DATABASES = {
         'USER': 'postgres.jnaddnwhbuzeupyohohl',  # Try with project ID
         'PASSWORD': 'KeUyX6b6dIkjhnIH',
         'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',  # Use pooler
-        'PORT': '5432',
+        'PORT': '6543',
         'OPTIONS': {
             'sslmode': 'require',
             'options': '-c search_path=public -c statement_timeout=30000'
