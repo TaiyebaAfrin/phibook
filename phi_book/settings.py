@@ -108,25 +108,25 @@ INTERNAL_IPS = [
 
 #active before push  on git
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'postgres.xxwfvgurvhcmaoxmzeov',
-#         'PASSWORD': 'SGBWQLz2yI2ikVaM',
-#         'HOST': 'aws-1-ap-south-1.pooler.supabase.com',
-#         'PORT': 6543
-#     }
-# }
-
-
-
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')  # Reads from .env file
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'aws-1-ap-southeast-1.pooler.supabase.com',
+        'PASSWORD': 'KeUyX6b6dIkjhnIH',
+        'HOST': 'aws-1-ap-southeast-1.pooler.supabase.com',
+        'PORT': 6543
+    }
 }
+
+
+
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')  # Reads from .env file
+#     )
+# }
 
 
 
