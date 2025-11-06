@@ -156,6 +156,7 @@ def intiate_payment(request):
     post_body['product_profile'] = "general"
 
     response = sslcz.createSession(post_body) # API response
+    print(response)
 
     if response.get("status") == 'SUCCESS':
         return Response({"payment_url": response['GatewayPageURL']})
