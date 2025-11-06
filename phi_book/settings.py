@@ -83,10 +83,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'phi_book.wsgi.app'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "https://groceryshop-rho.vercel.app",
     "https://backend-groceryshop.vercel.app",
     "http://127.0.0.1:8000",
+    "http://localhost:5173",
+    "https://groceryshop-rho.vercel.app",
+
 ]
 
 INTERNAL_IPS = [
