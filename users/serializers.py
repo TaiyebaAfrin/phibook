@@ -12,3 +12,4 @@ class UserSerializer(BaseUserSerializer):
         ref_name = 'CustomUser'
         fields = ['id', 'email', 'first_name',
                   'last_name', 'address', 'phone_number', 'is_staff']
+        read_only_fields = ['is_staff']
